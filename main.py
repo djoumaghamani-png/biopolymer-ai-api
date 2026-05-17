@@ -24,22 +24,67 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ── Téléchargement modele_module2.pkl depuis Google Drive ──
+MODELES_DIR  = "modeles"
+FILE_ID_M2   = "1mnm6gLpnhWMJo5-LceaL66CizIVDO5Z1"
+PATH_M2      = f"{MODELES_DIR}/modele_module2.pkl"
+
+def telecharger_depuis_drive(file_id: str, destination: str):
+    """Télécharge un fichier depuis Google Drive."""
+    print(f"📥 Téléchargement de {destination} depuis Google Drive...")
+    URL = "https://drive.google.com/uc?export=download"
+    session = requests.Session()
+
+    # Première requête pour obtenir le token de confirmation
+    response = session.get(URL, params={"id": file_id}, stream=True)
+    token = None
+    for key, value in response.cookies.items():
+        if key.startswith("download_warning"):
+            token = value
+            break
+
+    # Si token trouvé, relancer avec confirmation
+    if token:
+        params = {"id": file_id, "confirm": token}
+        response = session.get(URL, params=params, stream=True)
+
+    # Sauvegarder le fichier
+    os.makedirs(os.path.dirname(destination), exist_ok=True)
+    with open(destination, "wb") as f:
+        for chunk in response.iter_content(chunk_size=32768):
+            if chunk:
+                f.write(chunk)
+
+    taille = os.path.getsize(destination) / (1024*1024)
+    print(f"✅ Téléchargé : {destination} ({taille:.1f} MB)")
+
 # ── Chargement des modèles ─────────────────────────────────
-MODELES_DIR = "modeles"
 M1 = M2 = M3 = None
 
 def charger_modeles():
     global M1, M2, M3
     try:
+        # Module 1
         with open(f"{MODELES_DIR}/modele_module1.pkl", "rb") as f:
             M1 = pickle.load(f)
-        with open(f"{MODELES_DIR}/modele_module2.pkl", "rb") as f:
+        print(f"✅ Module 1 chargé — R²={M1['r2']:.3f}")
+
+        # Module 2 — télécharger depuis Drive si absent
+        if not os.path.exists(PATH_M2):
+            telecharger_depuis_drive(FILE_ID_M2, PATH_M2)
+        with open(PATH_M2, "rb") as f:
             M2 = pickle.load(f)
+        print(f"✅ Module 2 chargé — AUC={M2['auc']:.3f}")
+
+        # Module 3
         with open(f"{MODELES_DIR}/modele_module3.pkl", "rb") as f:
             M3 = pickle.load(f)
-        print("✅ Modèles chargés avec succès !")
+        print(f"✅ Module 3 chargé — AUC={M3['auc_biodeg']:.3f}")
+
+        print("🎉 Tous les modèles sont prêts !")
+
     except Exception as e:
-        print(f"⚠️ Modèles non trouvés : {e}")
+        print(f"⚠️ Erreur chargement modèles : {e}")
 
 charger_modeles()
 
@@ -107,7 +152,6 @@ def predire(smiles: str):
         tox_proba = float(M2["model"].predict_proba(X)[0][1])
     else:
         tox_proba = 0.05
-
     tox_pct = round(tox_proba * 100, 1)
 
     # Module 3 — Biodégradabilité + BCF
@@ -116,7 +160,6 @@ def predire(smiles: str):
         logbcf       = float(M3["model_bcf"].predict(X)[0])
     else:
         biodeg_proba, logbcf = 0.85, 1.2
-
     biodeg_pct = round(biodeg_proba * 100, 1)
 
     if biodeg_pct > 80:   jours = 90
@@ -165,7 +208,11 @@ def accueil():
     return {
         "message"  : "BioPolymer-AI API v1.0",
         "status"   : "active",
-        "modeles"  : "chargés" if M1 else "non chargés (mode démo)",
+        "modeles"  : {
+            "module1": "chargé" if M1 else "non chargé",
+            "module2": "chargé" if M2 else "non chargé",
+            "module3": "chargé" if M3 else "non chargé",
+        },
         "endpoints": ["/predict", "/smiles", "/health"]
     }
 
@@ -200,6 +247,12 @@ def predict(request: PolymerRequest):
 
     resultats = predire(smiles)
     return {
-        "polymere"    : {"nom": request.nom, "smiles": smiles, "iupac": info.get("iupac", request.nom), "formule": info.get("formula", ""), "poids_mol": info.get("mw", 0)},
+        "polymere"    : {
+            "nom"      : request.nom,
+            "smiles"   : smiles,
+            "iupac"    : info.get("iupac", request.nom),
+            "formule"  : info.get("formula", ""),
+            "poids_mol": info.get("mw", 0)
+        },
         "predictions" : resultats,
     }
