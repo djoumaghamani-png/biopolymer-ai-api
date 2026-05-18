@@ -5,4 +5,4 @@ requests
 numpy
 pandas
 scikit-learn
-rdkit-pypi
+rdkit
