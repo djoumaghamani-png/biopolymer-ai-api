@@ -260,7 +260,7 @@ import csv, os
 
 def charger_base_polymeres():
     base = {}
-    chemin = 'base_polymeres_biosources.csv'
+    chemin = 'base_polymeres_biosources officiel.csv'
     if os.path.exists(chemin):
         with open(chemin, 'r') as f:
             for row in csv.DictReader(f):
