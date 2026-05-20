@@ -1,0 +1,96 @@
+nom_recherche,nom_affiche,smiles,formule,poids_mol
+lactic acid,PLA,CC(C(=O)O)O,C3H6O3,90.08
+lactide,PLA-Lactide,CC1C(=O)OC(C(=O)O1)C,C6H8O4,144.12
+ethyl lactate,Lactate éthyle,CCOC(=O)C(C)O,C5H10O3,118.13
+methyl lactate,Lactate méthyle,CC(C(=O)OC)O,C4H8O3,104.10
+glycolic acid,PGA,C(C(=O)O)O,C2H4O3,76.05
+glycolide,PGA-Glycolide,C1C(=O)OCC(=O)O1,C4H4O4,116.07
+caprolactone,PCL,C1CCC(=O)OCC1,C6H10O2,114.14
+6-hydroxyhexanoic acid,PCL-linéaire,C(CCC(=O)O)CCO,C6H12O3,132.16
+3-hydroxybutyric acid,PHB,CC(CC(=O)O)O,C4H8O3,104.10
+3-hydroxyvaleric acid,PHV,CCC(CC(=O)O)O,C5H10O3,118.13
+3-hydroxyhexanoic acid,PHHx,CCCC(CC(=O)O)O,C6H12O3,132.16
+4-hydroxybutyric acid,P4HB,C(CC(=O)O)CO,C4H8O3,104.10
+3-hydroxyoctanoic acid,PHO,CCCCCC(CC(=O)O)O,C8H16O3,160.21
+3-hydroxydecanoic acid,PHD,CCCCCCCC(CC(=O)O)O,C10H20O3,188.26
+succinic acid,PBS-A,C(CC(=O)O)C(=O)O,C4H6O4,118.09
+"1,4-butanediol",PBS-B,C(CCO)CO,C4H10O2,90.12
+adipic acid,PBSA,C(CCC(=O)O)CC(=O)O,C6H10O4,146.14
+sebacic acid,Polysébaçique,C(CCCCC(=O)O)CCCC(=O)O,C10H18O4,202.25
+azelaic acid,Polyazelaïque,C(CCCC(=O)O)CCCC(=O)O,C9H16O4,188.22
+glutaric acid,Polyglutarique,C(CC(=O)O)CC(=O)O,C5H8O4,132.11
+suberic acid,Polysubérique,C(CCCC(=O)O)CCC(=O)O,C8H14O4,174.19
+dodecanedioic acid,Polydodécanedioïque,C(CCCCCC(=O)O)CCCCC(=O)O,C12H22O4,230.30
+pimelic acid,Acide pimélique,C(CCC(=O)O)CCC(=O)O,C7H12O4,160.17
+brassylic acid,Acide brassylique,C(CCCCCC(=O)O)CCCCCC(=O)O,C13H24O4,244.33
+"1,3-propanediol",PTT,C(CO)CO,C3H8O2,76.09
+ethylene glycol,Bio-PET-A,C(CO)O,C2H6O2,62.07
+isosorbide,Isosorbide,C1C(C2C(O1)C(CO2)O)O,C6H10O4,146.14
+neopentyl glycol,Néopentyl glycol,CC(C)(CO)CO,C5H12O2,104.15
+"1,2-propanediol",Propylène glycol,CC(CO)O,C3H8O2,76.09
+"2,3-butanediol","2,3-Butanediol",CC(C(C)O)O,C4H10O2,90.12
+terephthalic acid,Bio-PET-B,C1=CC(=CC=C1C(=O)O)C(=O)O,C8H6O4,166.13
+"2,5-furandicarboxylic acid",PEF,C1=C(OC(=C1)C(=O)O)C(=O)O,C6H4O5,156.09
+furfural,Polyfurane,C1=COC(=C1)C=O,C5H4O2,96.08
+5-hydroxymethylfurfural,HMF,C1=C(OC(=C1)C=O)CO,C6H6O3,126.11
+ferulic acid,Férulique,COC1=C(C=CC(=C1)C=CC(=O)O)O,C10H10O4,194.18
+coumaric acid,Coumarique,C1=CC(=CC=C1C=CC(=O)O)O,C9H8O3,164.16
+caffeic acid,Caféique,C1=CC(=C(C=C1C=CC(=O)O)O)O,C9H8O4,180.16
+vanillin,Vanilline,COC1=C(C=CC(=C1)C=O)O,C8H8O3,152.15
+syringaldehyde,Syringaldéhyde,COC1=CC(=CC(=C1O)OC)C=O,C9H10O4,182.17
+eugenol,Eugénol,COC1=C(C=CC(=C1)CC=C)O,C10H12O2,164.20
+guaiacol,Gaïacol,COC1=CC=CC=C1O,C7H8O2,124.14
+phenol,Phénol biosourcé,C1=CC=C(C=C1)O,C6H6O,94.11
+coniferyl alcohol,Alcool coniférylique,COC1=C(C=CC(=C1)C=CCO)O,C10H12O3,180.20
+glucose,Cellulose/Amidon,C(C1C(C(C(C(O1)O)O)O)O)O,C6H12O6,180.16
+fructose,Fructose,C1C(C(C(C(O1)(CO)O)O)O)O,C6H12O6,180.16
+galactose,Galactose,C(C1C(C(C(C(O1)O)O)O)O)O,C6H12O6,180.16
+mannose,Mannose,C(C1C(C(C(C(O1)O)O)O)O)O,C6H12O6,180.16
+xylose,Hémicellulose,C1C(C(C(C(O1)O)O)O)O,C5H10O5,150.13
+arabinose,Arabinose,C1C(C(C(C(O1)O)O)O)O,C5H10O5,150.13
+ribose,Ribose,C1C(C(C(C(O1)O)O)O)O,C5H10O5,150.13
+glucosamine,Chitosan,C(C1C(C(C(C(O1)O)N)O)O)O,C6H13NO5,179.17
+galactosamine,Chondroïtine,C(C1C(C(C(C(O1)O)N)O)O)O,C6H13NO5,179.17
+glucuronic acid,Glucuronique,C(=O)C(C(C(C(C(=O)O)O)O)O)O,C6H10O7,194.14
+sorbitol,Sorbitol,C(C(C(C(C(CO)O)O)O)O)O,C6H14O6,182.17
+xylitol,Xylitol,C(C(C(C(CO)O)O)O)O,C5H12O5,152.15
+mannitol,Mannitol,C(C(C(C(C(CO)O)O)O)O)O,C6H14O6,182.17
+erythritol,Érythritol,C(C(C(CO)O)O)O,C4H10O4,122.12
+itaconic acid,Polyitaconique,C=C(CC(=O)O)C(=O)O,C5H6O4,130.10
+levulinic acid,Polylevulinique,CC(=O)CCC(=O)O,C5H8O3,116.11
+fumaric acid,Polyfumarique,C(=CC(=O)O)C(=O)O,C4H4O4,116.07
+citric acid,Polycitrique,C(C(=O)O)C(CC(=O)O)(C(=O)O)O,C6H8O7,192.12
+malic acid,PMA,C(C(C(=O)O)O)C(=O)O,C4H6O5,134.09
+tartaric acid,Polytartrique,C(C(C(=O)O)O)(C(=O)O)O,C4H6O6,150.09
+mandelic acid,Polymandelique,C1=CC=C(C=C1)C(C(=O)O)O,C8H8O3,152.15
+oxalic acid,Polyoxalique,C(=O)(C(=O)O)O,C2H2O4,90.03
+malonic acid,Polymalonique,C(C(=O)O)C(=O)O,C3H4O4,104.06
+pyruvic acid,Acide pyruvique,CC(=O)C(=O)O,C3H4O3,88.06
+muconic acid,Polymuconique,C(=CC(=O)O)C=CC(=O)O,C6H6O4,142.11
+glucaric acid,Polyglucarique,C(C(C(C(=O)O)O)O)(C(C(=O)O)O)O,C6H10O8,210.14
+glycine,Polyglycine,C(C(=O)O)N,C2H5NO2,75.07
+alanine,Polyalanine,CC(C(=O)O)N,C3H7NO2,89.09
+valine,Polyvaline,CC(C)C(C(=O)O)N,C5H11NO2,117.15
+leucine,Polyleucine,CC(C)CC(C(=O)O)N,C6H13NO2,131.17
+serine,Polysérine,C(C(C(=O)O)N)O,C3H7NO3,105.09
+lysine,Polylysine,C(CCN)CC(C(=O)O)N,C6H14N2O2,146.19
+glutamic acid,Polyglutamique,C(CC(=O)O)C(C(=O)O)N,C5H9NO4,147.13
+aspartic acid,Polyaspartique,C(C(C(=O)O)N)C(=O)O,C4H7NO4,133.10
+11-aminoundecanoic acid,Nylon 11,C(CCCCCN)CCCCC(=O)O,C11H23NO2,201.31
+12-aminododecanoic acid,Nylon 12,C(CCCCCC(=O)O)CCCCCN,C12H25NO2,215.33
+limonene,Limonène,CC1=CCC(CC1)C(=C)C,C10H16,136.23
+linalool,Linalool,CC(=CCCC(C)(C=C)O)C,C10H18O,154.25
+geraniol,Géraniol,CC(=CCCC(=CCO)C)C,C10H18O,154.25
+farnesol,Farnésol,CC(=CCCC(=CCCC(=CCO)C)C)C,C15H26O,222.37
+squalene,Squalène,CC(=CCCC(=CCCC(=CCCC=C(C)CCC=C(C)CCC=C(C)C)C)C)C,C30H50,410.7
+oleic acid,Acide oléique,CCCCCCCCC=CCCCCCCCC(=O)O,C18H34O2,282.5
+linoleic acid,Acide linoléique,CCCCCC=CCC=CCCCCCCCC(=O)O,C18H32O2,280.4
+linolenic acid,Acide linolénique,CCC=CCC=CCC=CCCCCCCCC(=O)O,C18H30O2,278.4
+ricinoleic acid,Acide ricinoléique,CCCCCCC(CC=CCCCCCCCC(=O)O)O,C18H34O3,298.5
+palmitic acid,Acide palmitique,CCCCCCCCCCCCCCCC(=O)O,C16H32O2,256.42
+stearic acid,Acide stéarique,CCCCCCCCCCCCCCCCCC(=O)O,C18H36O2,284.5
+erucic acid,Acide érucique,CCCCCCCCC=CCCCCCCCCCCCC(=O)O,C22H42O2,338.6
+glycerol,Glycérol,C(C(CO)O)O,C3H8O3,92.09
+tributyl citrate,Citrate tributyle,CCCCOC(=O)CC(CC(=O)OCCCC)(C(=O)OCCCC)O,C18H32O7,360.4
+sinapic acid,Acide sinapique,COC1=CC(=CC(=C1O)OC)C=CC(=O)O,C11H12O5,224.21
+syringol,Syringol,COC1=C(C(=CC=C1)OC)O,C8H10O3,154.16
