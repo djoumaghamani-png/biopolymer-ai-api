@@ -256,3 +256,16 @@ def predict(request: PolymerRequest):
         },
         "predictions" : resultats,
     }
+import csv, os
+
+def charger_base_polymeres():
+    base = {}
+    chemin = 'base_polymeres_biosources.csv'
+    if os.path.exists(chemin):
+        with open(chemin, 'r') as f:
+            for row in csv.DictReader(f):
+                base[row['nom_recherche'].lower()] = row['smiles']
+                base[row['nom_affiche'].lower()] = row['smiles']
+    return base
+
+BASE_POLYMERES = charger_base_polymeres()   
